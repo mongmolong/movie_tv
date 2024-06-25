@@ -1,6 +1,6 @@
 import React from 'react';
 import MovieList from './components/MovieList';
-import TvList from './components/TvList';
+// import TvList from './components/TvList';
 
 const App = () => {
   return (

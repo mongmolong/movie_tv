@@ -17,7 +17,6 @@ const router = createBrowserRouter([
     },
     {
         path: "/tv",
-        // element: <MovieList />
         element: <TvList />
     },
     {
@@ -25,6 +24,7 @@ const router = createBrowserRouter([
         element: <TvDetails />
     },
 
+    
 
     // {
     //     path: "/",
@@ -42,10 +42,6 @@ const router = createBrowserRouter([
     //     path: "/tv/:id", // TV 프로그램 상세 페이지
     //     element: <TvDetails />
     // },
-
-
-
-
 ])
 
 export default router;

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const MovieList = () => {
 
     //1. 데이터를 담는 그릇 설정 
-    const [movies, setMovies] = useState([])//어떤 형태인지 확인!
+    const [movies, setMovies] = useState([])
 
 
     //2. 데이터를 가져오는 함수 선언
@@ -42,17 +42,16 @@ const MovieList = () => {
             {/* <button onClick={getMovies}>버튼 클릭</button> */}
             <Row className="mt-5" >
                 {movies && movies.map(movie => (
-                    <Col className="mb-3" key={movie.id}> 
-                     {/* key이렇게 넣는거 맞아?  */}
-                        <Card style={{ width: '18rem' }}>                      
+                    <Col className="mb-3">
+                        <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
                             <Card.Body>
-                                <Card.Title>{movie.title.slice(0, 20) } </Card.Title>
+                                <Card.Title>{movie.title.slice(0, 10)} </Card.Title>
                                 <Card.Text>
-                                    {movie.overview.slice(0, 80)+ '...'}
+                                    {movie.overview.slice(0, 90)}
                                 </Card.Text>
                                 <Link to={`/${movie.id}`}>
-                                    <Button variant="primary">MORE</Button>
+                                    <Button variant="primary">Go somewhere</Button>
                                 </Link>
                             </Card.Body>
                         </Card>
@@ -64,11 +63,3 @@ const MovieList = () => {
 };
 
 export default MovieList;
-
-
-//코드 빌드 순서
-// 1. 위에서 아래로 빌드함
-// 2.  =기준으로 오른쪽에서 왼쪽으로 치환됨!
-// 3. .은 하위 메소드를 호출하는 명령어
-// 4. () 는 함수들을 모아둔 것을 의미
-// 5. const {} 직접 호출할때 사용

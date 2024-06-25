@@ -55,11 +55,7 @@ const TvList = () => {
             </Row>
         </Container>
 
-
-
     )
-
-
-
 };
+
 export default TvList;
