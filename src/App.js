@@ -5,8 +5,8 @@ import TvList from './components/TvList';
 const App = () => {
   return (
     <div>
-      <TvList />
-      {/* <MovieList /> */}
+      {/* <TvList /> */}
+      <MovieList />
     </div>
   );
 };
